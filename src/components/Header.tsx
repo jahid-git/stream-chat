@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTheme } from '@/contexts/ThemeContext';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 const FiGithub = dynamic(() => import('react-icons/fi').then(mod => mod.FiGithub), { ssr: false });
 const FiMoon = dynamic(() => import('react-icons/fi').then(mod => mod.FiMoon), { ssr: false });
@@ -13,6 +14,7 @@ const Header = () => {
 
     return (
         <header className="bg-blue-500 dark:bg-gray-800 text-white p-4 flex justify-between items-center">
+            <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
             <h1 className="text-xl font-bold">StreamChat</h1>
             <div className="flex items-center space-x-4">
                 <a
