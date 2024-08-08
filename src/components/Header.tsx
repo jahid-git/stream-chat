@@ -1,19 +1,19 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import { FiGithub, FiMoon, FiSun } from 'react-icons/fi';
 import { useTheme } from '@/contexts/ThemeContext';
+import dynamic from 'next/dynamic';
+
+const FiGithub = dynamic(() => import('react-icons/fi').then(mod => mod.FiGithub), { ssr: false });
+const FiMoon = dynamic(() => import('react-icons/fi').then(mod => mod.FiMoon), { ssr: false });
+const FiSun = dynamic(() => import('react-icons/fi').then(mod => mod.FiSun), { ssr: false });
 
 const Header = () => {
     const { darkMode, toggleTheme } = useTheme();
 
     return (
-        <header className="bg-blue-700 dark:bg-gray-800 text-white p-4 flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-                <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
-                <h1 className="ml-12 text-xl font-bold">StreamChat</h1>
-            </div>
+        <header className="bg-blue-500 dark:bg-gray-800 text-white p-4 flex justify-between items-center">
+            <h1 className="text-xl font-bold">StreamChat</h1>
             <div className="flex items-center space-x-4">
                 <a
                     href="https://github.com/jahid-git/stream-chat.git"
