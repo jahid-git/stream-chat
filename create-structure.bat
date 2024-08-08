@@ -16,12 +16,13 @@ mkdir src\types
 mkdir src\services
 
 :: Create common files
-echo. > src\app\page.module.css
 echo. > src\app\layout.tsx
 echo. > src\app\page.tsx
 echo. > src\app\api\chat\route.ts
-echo. > src\components\Chat.tsx
-echo. > src\components\Message.tsx
+echo. > src\components\Header.tsx
+echo. > src\components\ChatInput.tsx
+echo. > src\components\Response.tsx
+echo. > src\contexts\AppContext.tsx
 echo. > src\contexts\ThemeContext.tsx
 echo. > src\styles\globals.css
 echo. > src\utils\markdownUtils.ts
